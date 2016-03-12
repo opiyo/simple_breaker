@@ -19,5 +19,12 @@ public class BottomScript : MonoBehaviour {
 		//GameOverの文字を表示させる
 		gameOver.Lose();
 		goTitle = true;//Update文の実行
+	} 
+	
+	void OnTriggerEnter (Collider col)
+	{
+		if (col.tag == "Item") {
+			Destroy(col.gameObject);
+		}
 	}
 }
